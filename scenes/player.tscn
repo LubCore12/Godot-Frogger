@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://chs7v1foo13dj" path="res://scenes/scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_g2els"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(8, 11)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_g2els")
 region = Rect2(16, 0, 16, 16)
@@ -96,10 +93,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(8, 7.5)
+
 [node name="Player" type="CharacterBody2D" unique_id=423795999]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_g2els")
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=998008789]
+sprite_frames = SubResource("SpriteFrames_tuyoq")
+animation = &"down"
+autoplay = "up"
 
 [node name="Camera" type="Camera2D" parent="." unique_id=650932445]
 zoom = Vector2(4, 4)
@@ -112,10 +117,5 @@ position_smoothing_enabled = true
 position_smoothing_speed = 15.0
 
 [node name="Shape" type="CollisionShape2D" parent="." unique_id=2109328483]
-position = Vector2(0, 1)
+position = Vector2(0, 2.75)
 shape = SubResource("RectangleShape2D_g2els")
-
-[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=998008789]
-sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"down"
-autoplay = "up"
