@@ -57,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fjrip")
 }],
-"loop": true,
+"loop": 1,
 "name": &"down",
 "speed": 5.0
 }, {
@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"left",
 "speed": 5.0
 }, {
@@ -91,12 +91,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y4r1p")
 }],
-"loop": true,
+"loop": 1,
 "name": &"up",
 "speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=423795999]
+collision_layer = 2
+collision_mask = 13
 script = ExtResource("1_g2els")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=650932445]
