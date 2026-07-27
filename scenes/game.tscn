@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://58kopy31xbf8" path="res://graphics/objects/taxi.png" id="17_rysoc"]
 [ext_resource type="Texture2D" uid="uid://cfe22lwgaf1k2" path="res://graphics/objects/traffic.png" id="18_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://boj6kq1t4mduj" path="res://graphics/objects/tree potted.png" id="21_5newe"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="22_37s47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
 size = Vector2(26, 680)
@@ -161,21 +162,27 @@ shape = SubResource("RectangleShape2D_u5sy4")
 wait_time = 0.15
 autostart = true
 
+[node name="ScoreTimer" type="Timer" parent="Timer" unique_id=742691538]
+autostart = true
+
 [node name="Objects" type="Node2D" parent="." unique_id=2033812265]
 y_sort_enabled = true
 
 [node name="Player" parent="Objects" unique_id=1872134753 instance=ExtResource("2_yqjtg")]
-position = Vector2(0, 194)
+position = Vector2(0, 201)
 
 [node name="Cars" type="Node2D" parent="Objects" unique_id=1571187398]
+y_sort_enabled = true
 
 [node name="DecoObjects" type="Node2D" parent="Objects" unique_id=351817392]
 y_sort_enabled = true
 
 [node name="Houses" type="Node2D" parent="Objects/DecoObjects" unique_id=1678103342]
+y_sort_enabled = true
 
 [node name="LongHouse" type="StaticBody2D" parent="Objects/DecoObjects/Houses" unique_id=1973080733]
 position = Vector2(-19, 298)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Houses/LongHouse" unique_id=26980267]
@@ -188,6 +195,7 @@ shape = SubResource("RectangleShape2D_2gruq")
 
 [node name="OrangeHouse" type="StaticBody2D" parent="Objects/DecoObjects/Houses" unique_id=1967747538]
 position = Vector2(84, 292)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Houses/OrangeHouse" unique_id=567217045]
@@ -200,6 +208,7 @@ shape = SubResource("RectangleShape2D_orj3w")
 
 [node name="RedHouse" type="StaticBody2D" parent="Objects/DecoObjects/Houses" unique_id=1397462486]
 position = Vector2(-120, -278)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Houses/RedHouse" unique_id=945891773]
@@ -212,6 +221,7 @@ shape = SubResource("RectangleShape2D_jcaoh")
 
 [node name="RedHouse2" type="StaticBody2D" parent="Objects/DecoObjects/Houses" unique_id=800238209]
 position = Vector2(13, -282)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Houses/RedHouse2" unique_id=264752219]
@@ -224,6 +234,7 @@ shape = SubResource("RectangleShape2D_jcaoh")
 
 [node name="RedHouse3" type="StaticBody2D" parent="Objects/DecoObjects/Houses" unique_id=1365369608]
 position = Vector2(144, -278)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Houses/RedHouse3" unique_id=168305000]
@@ -235,9 +246,11 @@ position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_jcaoh")
 
 [node name="Trees" type="Node2D" parent="Objects/DecoObjects" unique_id=492564887]
+y_sort_enabled = true
 
 [node name="GreenTree" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=52758921]
 position = Vector2(-171, 232)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/GreenTree" unique_id=739761537]
@@ -250,6 +263,7 @@ shape = SubResource("RectangleShape2D_iqswn")
 
 [node name="GreenTree6" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=1157084538]
 position = Vector2(192, 315)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/GreenTree6" unique_id=1147894326]
@@ -262,6 +276,7 @@ shape = SubResource("RectangleShape2D_iqswn")
 
 [node name="GreenTree2" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=1231715006]
 position = Vector2(-153, 282)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/GreenTree2" unique_id=2063452182]
@@ -274,6 +289,7 @@ shape = SubResource("RectangleShape2D_iqswn")
 
 [node name="GreenTree4" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=1141344971]
 position = Vector2(172, 278)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/GreenTree4" unique_id=1428653016]
@@ -286,6 +302,7 @@ shape = SubResource("RectangleShape2D_iqswn")
 
 [node name="GreenTree5" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=860677285]
 position = Vector2(144, 239)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/GreenTree5" unique_id=469086430]
@@ -298,6 +315,7 @@ shape = SubResource("RectangleShape2D_iqswn")
 
 [node name="GreenTree3" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=972797737]
 position = Vector2(-181, 320)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/GreenTree3" unique_id=1699708934]
@@ -310,6 +328,7 @@ shape = SubResource("RectangleShape2D_iqswn")
 
 [node name="RedTree" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=967005718]
 position = Vector2(-146, 247)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/RedTree" unique_id=757636970]
@@ -322,6 +341,7 @@ shape = SubResource("RectangleShape2D_ragje")
 
 [node name="RedTree4" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=30964168]
 position = Vector2(144, 282)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/RedTree4" unique_id=2027436228]
@@ -334,6 +354,7 @@ shape = SubResource("RectangleShape2D_ragje")
 
 [node name="RedTree2" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=1463664098]
 position = Vector2(-174, 289)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/RedTree2" unique_id=732852293]
@@ -346,6 +367,7 @@ shape = SubResource("RectangleShape2D_ragje")
 
 [node name="RedTree3" type="StaticBody2D" parent="Objects/DecoObjects/Trees" unique_id=1055777953]
 position = Vector2(144, 320)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Trees/RedTree3" unique_id=991333893]
@@ -357,9 +379,11 @@ position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_ragje")
 
 [node name="PottedTrees" type="Node2D" parent="Objects/DecoObjects" unique_id=2073073077]
+y_sort_enabled = true
 
 [node name="PottedTree" type="StaticBody2D" parent="Objects/DecoObjects/PottedTrees" unique_id=1269549342]
 position = Vector2(-94, -207)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/PottedTrees/PottedTree" unique_id=1752760257]
@@ -372,6 +396,7 @@ shape = SubResource("RectangleShape2D_1ee1q")
 
 [node name="PottedTree3" type="StaticBody2D" parent="Objects/DecoObjects/PottedTrees" unique_id=1511936736]
 position = Vector2(-155, -231)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/PottedTrees/PottedTree3" unique_id=1019726016]
@@ -384,6 +409,7 @@ shape = SubResource("RectangleShape2D_1ee1q")
 
 [node name="PottedTree4" type="StaticBody2D" parent="Objects/DecoObjects/PottedTrees" unique_id=1179002725]
 position = Vector2(184, -236)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/PottedTrees/PottedTree4" unique_id=2029126320]
@@ -396,6 +422,7 @@ shape = SubResource("RectangleShape2D_1ee1q")
 
 [node name="PottedTree2" type="StaticBody2D" parent="Objects/DecoObjects/PottedTrees" unique_id=1056742641]
 position = Vector2(126, -207)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/PottedTrees/PottedTree2" unique_id=453131675]
@@ -407,9 +434,11 @@ position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_1ee1q")
 
 [node name="Traffics" type="Node2D" parent="Objects/DecoObjects" unique_id=1329765813]
+y_sort_enabled = true
 
 [node name="Traffic" type="StaticBody2D" parent="Objects/DecoObjects/Traffics" unique_id=1117710893]
 position = Vector2(109, -76)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Traffics/Traffic" unique_id=1372615445]
@@ -421,6 +450,7 @@ shape = SubResource("RectangleShape2D_dok0e")
 
 [node name="Traffic2" type="StaticBody2D" parent="Objects/DecoObjects/Traffics" unique_id=1119904709]
 position = Vector2(59, 20)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Traffics/Traffic2" unique_id=111570002]
@@ -432,6 +462,7 @@ shape = SubResource("RectangleShape2D_dok0e")
 
 [node name="Traffic5" type="StaticBody2D" parent="Objects/DecoObjects/Traffics" unique_id=383725777]
 position = Vector2(59, 67)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Traffics/Traffic5" unique_id=539032634]
@@ -443,6 +474,7 @@ shape = SubResource("RectangleShape2D_dok0e")
 
 [node name="Traffic3" type="StaticBody2D" parent="Objects/DecoObjects/Traffics" unique_id=138236092]
 position = Vector2(-8, 20)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Traffics/Traffic3" unique_id=362327337]
@@ -451,10 +483,12 @@ texture = ExtResource("18_ssvqc")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/DecoObjects/Traffics/Traffic3" unique_id=425105299]
+position = Vector2(-8, 0)
 shape = SubResource("RectangleShape2D_dok0e")
 
 [node name="Traffic4" type="StaticBody2D" parent="Objects/DecoObjects/Traffics" unique_id=1155407116]
 position = Vector2(-8, 67)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Traffics/Traffic4" unique_id=1282581325]
@@ -463,12 +497,15 @@ texture = ExtResource("18_ssvqc")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/DecoObjects/Traffics/Traffic4" unique_id=1940849262]
+position = Vector2(-8, 0)
 shape = SubResource("RectangleShape2D_dok0e")
 
 [node name="Cars" type="Node2D" parent="Objects/DecoObjects" unique_id=600870728]
+y_sort_enabled = true
 
 [node name="GreenCar" type="StaticBody2D" parent="Objects/DecoObjects/Cars" unique_id=2052333520]
 position = Vector2(-112, 66)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Cars/GreenCar" unique_id=1693023814]
@@ -481,6 +518,7 @@ shape = SubResource("RectangleShape2D_77lwj")
 
 [node name="RedCar" type="StaticBody2D" parent="Objects/DecoObjects/Cars" unique_id=1957252358]
 position = Vector2(144, 67)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Cars/RedCar" unique_id=826974023]
@@ -493,6 +531,7 @@ shape = SubResource("RectangleShape2D_ocdca")
 
 [node name="RedCar2" type="StaticBody2D" parent="Objects/DecoObjects/Cars" unique_id=1493542883]
 position = Vector2(176, 194)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Cars/RedCar2" unique_id=1182701401]
@@ -505,6 +544,7 @@ shape = SubResource("RectangleShape2D_ocdca")
 
 [node name="Taxi" type="StaticBody2D" parent="Objects/DecoObjects/Cars" unique_id=1383178675]
 position = Vector2(-63, 194)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Cars/Taxi" unique_id=1355611878]
@@ -516,9 +556,11 @@ position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_ys57t")
 
 [node name="Boxes" type="Node2D" parent="Objects/DecoObjects" unique_id=1901839426]
+y_sort_enabled = true
 
 [node name="RedBox" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=511992822]
 position = Vector2(-149, 50)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/RedBox" unique_id=1255657719]
@@ -531,6 +573,7 @@ shape = SubResource("RectangleShape2D_ila21")
 
 [node name="GreenBox" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=948500294]
 position = Vector2(-159, 54)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/GreenBox" unique_id=1618573502]
@@ -543,6 +586,7 @@ shape = SubResource("RectangleShape2D_u057j")
 
 [node name="GreenBox2" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=781057944]
 position = Vector2(-155, 25)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/GreenBox2" unique_id=2029164482]
@@ -555,6 +599,7 @@ shape = SubResource("RectangleShape2D_u057j")
 
 [node name="GreenBox3" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=1224246154]
 position = Vector2(144, 33)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/GreenBox3" unique_id=1248990280]
@@ -567,6 +612,7 @@ shape = SubResource("RectangleShape2D_u057j")
 
 [node name="MixBox" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=1734932107]
 position = Vector2(-151, 58)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/MixBox" unique_id=566759663]
@@ -579,6 +625,7 @@ shape = SubResource("RectangleShape2D_bl2r1")
 
 [node name="MixBox2" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=162582808]
 position = Vector2(-173, 31)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/MixBox2" unique_id=18973842]
@@ -591,6 +638,7 @@ shape = SubResource("RectangleShape2D_bl2r1")
 
 [node name="MixBox3" type="StaticBody2D" parent="Objects/DecoObjects/Boxes" unique_id=1297742801]
 position = Vector2(126, 23)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Boxes/MixBox3" unique_id=74871669]
@@ -602,9 +650,11 @@ position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_bl2r1")
 
 [node name="Fencings" type="Node2D" parent="Objects/DecoObjects" unique_id=1205377515]
+y_sort_enabled = true
 
 [node name="Barrier" type="StaticBody2D" parent="Objects/DecoObjects/Fencings" unique_id=415846562]
 position = Vector2(176, 69)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Fencings/Barrier" unique_id=99286384]
@@ -617,6 +667,7 @@ shape = SubResource("RectangleShape2D_foaee")
 
 [node name="Barrier2" type="StaticBody2D" parent="Objects/DecoObjects/Fencings" unique_id=1466663748]
 position = Vector2(176, 50)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Fencings/Barrier2" unique_id=1708982978]
@@ -629,6 +680,7 @@ shape = SubResource("RectangleShape2D_foaee")
 
 [node name="Barrier3" type="StaticBody2D" parent="Objects/DecoObjects/Fencings" unique_id=1678251038]
 position = Vector2(-89, 73)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Fencings/Barrier3" unique_id=2141433732]
@@ -641,6 +693,7 @@ shape = SubResource("RectangleShape2D_foaee")
 
 [node name="Barrier4" type="StaticBody2D" parent="Objects/DecoObjects/Fencings" unique_id=1190498541]
 position = Vector2(-71, 73)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Fencings/Barrier4" unique_id=1174876765]
@@ -653,6 +706,7 @@ shape = SubResource("RectangleShape2D_foaee")
 
 [node name="Line" type="StaticBody2D" parent="Objects/DecoObjects/Fencings" unique_id=2133629231]
 position = Vector2(-46, -75)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Fencings/Line" unique_id=633481557]
@@ -665,6 +719,7 @@ shape = SubResource("RectangleShape2D_leag4")
 
 [node name="Line2" type="StaticBody2D" parent="Objects/DecoObjects/Fencings" unique_id=289118217]
 position = Vector2(-114, -75)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Fencings/Line2" unique_id=1286556716]
@@ -676,9 +731,11 @@ position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_leag4")
 
 [node name="Benches" type="Node2D" parent="Objects/DecoObjects" unique_id=1637563973]
+y_sort_enabled = true
 
 [node name="Bench" type="StaticBody2D" parent="Objects/DecoObjects/Benches" unique_id=970350598]
 position = Vector2(113, -306)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Benches/Bench" unique_id=105651911]
@@ -691,6 +748,7 @@ shape = SubResource("RectangleShape2D_b5fsu")
 
 [node name="Bench2" type="StaticBody2D" parent="Objects/DecoObjects/Benches" unique_id=363108020]
 position = Vector2(113, -282)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Benches/Bench2" unique_id=2144188047]
@@ -703,6 +761,7 @@ shape = SubResource("RectangleShape2D_b5fsu")
 
 [node name="Bench3" type="StaticBody2D" parent="Objects/DecoObjects/Benches" unique_id=2098181572]
 position = Vector2(-85, -306)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Benches/Bench3" unique_id=1344723119]
@@ -716,6 +775,7 @@ shape = SubResource("RectangleShape2D_b5fsu")
 
 [node name="Bench4" type="StaticBody2D" parent="Objects/DecoObjects/Benches" unique_id=1218627281]
 position = Vector2(-85, -282)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Benches/Bench4" unique_id=204004757]
@@ -728,9 +788,11 @@ position = Vector2(0, -0.0625)
 shape = SubResource("RectangleShape2D_b5fsu")
 
 [node name="Signs" type="Node2D" parent="Objects/DecoObjects" unique_id=142725132]
+y_sort_enabled = true
 
 [node name="Sign" type="StaticBody2D" parent="Objects/DecoObjects/Signs" unique_id=1597914493]
 position = Vector2(-125, 202)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Signs/Sign" unique_id=137732539]
@@ -743,6 +805,7 @@ shape = SubResource("RectangleShape2D_so38s")
 
 [node name="Sign2" type="StaticBody2D" parent="Objects/DecoObjects/Signs" unique_id=448016433]
 position = Vector2(-35, -259)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Signs/Sign2" unique_id=1599223605]
@@ -754,9 +817,11 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_so38s")
 
 [node name="Bins" type="Node2D" parent="Objects/DecoObjects" unique_id=505556853]
+y_sort_enabled = true
 
 [node name="Bin" type="StaticBody2D" parent="Objects/DecoObjects/Bins" unique_id=1414685036]
 position = Vector2(-137, -207)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Bins/Bin" unique_id=973164854]
@@ -769,6 +834,7 @@ shape = SubResource("RectangleShape2D_8w2ty")
 
 [node name="Bin2" type="StaticBody2D" parent="Objects/DecoObjects/Bins" unique_id=454169300]
 position = Vector2(161, -207)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Bins/Bin2" unique_id=1495028306]
@@ -781,6 +847,7 @@ shape = SubResource("RectangleShape2D_8w2ty")
 
 [node name="Bin3" type="StaticBody2D" parent="Objects/DecoObjects/Bins" unique_id=2072546640]
 position = Vector2(91, 39)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Bins/Bin3" unique_id=1044135667]
@@ -793,6 +860,7 @@ shape = SubResource("RectangleShape2D_8w2ty")
 
 [node name="Bin4" type="StaticBody2D" parent="Objects/DecoObjects/Bins" unique_id=927758452]
 position = Vector2(-137, 67)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Bins/Bin4" unique_id=1997486072]
@@ -804,9 +872,11 @@ position = Vector2(0, 3.25)
 shape = SubResource("RectangleShape2D_8w2ty")
 
 [node name="Lights" type="Node2D" parent="Objects/DecoObjects" unique_id=773052780]
+y_sort_enabled = true
 
 [node name="Light" type="StaticBody2D" parent="Objects/DecoObjects/Lights" unique_id=1733415898]
 position = Vector2(-85, -239)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Lights/Light" unique_id=1346195511]
@@ -819,6 +889,7 @@ shape = SubResource("RectangleShape2D_iehd6")
 
 [node name="Light2" type="StaticBody2D" parent="Objects/DecoObjects/Lights" unique_id=961406029]
 position = Vector2(113, -239)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/DecoObjects/Lights/Light2" unique_id=1121325849]
@@ -867,6 +938,22 @@ position = Vector2(-209, -97)
 [node name="Marker2D5" type="Marker2D" parent="CarStartPositions" unique_id=813978192]
 position = Vector2(205, -118)
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=1636957483]
+
+[node name="Score" type="Label" parent="UI" unique_id=1987351394]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_top = 30.0
+offset_right = 30.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("22_37s47")
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+
 [connection signal="body_entered" from="Finish" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
+[connection signal="timeout" from="Timer/ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="area_exited" from="MapArea" to="." method="_on_map_area_area_exited"]
